@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_932e7108fadb66e0bc60842c870fae23 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_932e7108fadb66e0bc60842c870fae23" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_932e7108fadb66e0bc60842c870fae23 = L.map(
+                "map_932e7108fadb66e0bc60842c870fae23",
+                {
+                    center: [50.6, -3.85],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c06335693ac69653f2e26252c6d17cff = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c06335693ac69653f2e26252c6d17cff.addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var marker_04d768d4656bdf4ef4647581da69c8c4 = L.marker(
+                [50.625132, -3.688755],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_ddbd0a6a9d32f979db53fd228cbf22a7 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_04d768d4656bdf4ef4647581da69c8c4.bindTooltip(
+                `<div>
+                     <b>Teign (Lower)</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04d768d4656bdf4ef4647581da69c8c4.setIcon(div_icon_ddbd0a6a9d32f979db53fd228cbf22a7);
+            
+    
+            var poly_line_3d2d9c5c17ea9862603a7df3543442c0 = L.polyline(
+                [[50.625132, -3.688755], [50.592312, -3.716672]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_3d2d9c5c17ea9862603a7df3543442c0.bindTooltip(
+                `<div>
+                     Teign (Lower) → Bovey Tracey
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_227593286b91956db282702c75993d66 = L.marker(
+                [50.592312, -3.716672],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_1b523be892125d01537a2b214f2d8898 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_227593286b91956db282702c75993d66.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Bovey Tracey<br>(Teign (Lower))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_227593286b91956db282702c75993d66.setIcon(icon_1b523be892125d01537a2b214f2d8898);
+            
+    
+            var marker_2285f6078a3c39bd0cd69519dbbf2215 = L.marker(
+                [50.502805, -4.364948],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_9ab9c7a6738b4f02b14c1500f79a1dad = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_2285f6078a3c39bd0cd69519dbbf2215.bindTooltip(
+                `<div>
+                     <b>Lower River Lynher</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2285f6078a3c39bd0cd69519dbbf2215.setIcon(div_icon_9ab9c7a6738b4f02b14c1500f79a1dad);
+            
+    
+            var poly_line_1449db716c9565c7eadc457522f73951 = L.polyline(
+                [[50.502805, -4.364948], [50.54654, -4.320063]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_1449db716c9565c7eadc457522f73951.bindTooltip(
+                `<div>
+                     Lower River Lynher → Stoke Climsland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9c255e9820ec3bb374f59c5f05f640bf = L.marker(
+                [50.54654, -4.320063],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_2ed063ae2e3939e01d0af998de19ad99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9c255e9820ec3bb374f59c5f05f640bf.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Stoke Climsland<br>(Lower River Lynher)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c255e9820ec3bb374f59c5f05f640bf.setIcon(icon_2ed063ae2e3939e01d0af998de19ad99);
+            
+    
+            var marker_0d47b0983f35597c262e6c00fea4b84e = L.marker(
+                [50.559614, -4.260444],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_5ace1b639105ab587977fb61d7f7928c = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_0d47b0983f35597c262e6c00fea4b84e.bindTooltip(
+                `<div>
+                     <b>Lower River Tamar</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d47b0983f35597c262e6c00fea4b84e.setIcon(div_icon_5ace1b639105ab587977fb61d7f7928c);
+            
+    
+            var poly_line_894e213200d11d9091ca230871245373 = L.polyline(
+                [[50.559614, -4.260444], [50.54654, -4.320063]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_894e213200d11d9091ca230871245373.bindTooltip(
+                `<div>
+                     Lower River Tamar → Stoke Climsland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bdf279dffcacd789f1fc56a7e69b2206 = L.marker(
+                [50.54654, -4.320063],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_747cad280e217245eb8a168513d0e321 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bdf279dffcacd789f1fc56a7e69b2206.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Stoke Climsland<br>(Lower River Tamar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bdf279dffcacd789f1fc56a7e69b2206.setIcon(icon_747cad280e217245eb8a168513d0e321);
+            
+    
+            var marker_baef955d10a15b7aacaa3509cd46a677 = L.marker(
+                [50.584675, -4.368589],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_f20187e8830db16d186156b5d7e8daa3 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_baef955d10a15b7aacaa3509cd46a677.bindTooltip(
+                `<div>
+                     <b>Lower River Inny</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_baef955d10a15b7aacaa3509cd46a677.setIcon(div_icon_f20187e8830db16d186156b5d7e8daa3);
+            
+    
+            var poly_line_4d0e500acbf633f3f446e9a229ca1b10 = L.polyline(
+                [[50.584675, -4.368589], [50.54654, -4.320063]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_4d0e500acbf633f3f446e9a229ca1b10.bindTooltip(
+                `<div>
+                     Lower River Inny → Stoke Climsland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8e5bc0b25ad895ad2a603f0224401d55 = L.marker(
+                [50.54654, -4.320063],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_43ca7092fbeb224ed5acf62ee3ab8d81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8e5bc0b25ad895ad2a603f0224401d55.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Stoke Climsland<br>(Lower River Inny)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e5bc0b25ad895ad2a603f0224401d55.setIcon(icon_43ca7092fbeb224ed5acf62ee3ab8d81);
+            
+    
+            var marker_c714d5700ad00acc73aacd49aff2569e = L.marker(
+                [50.505137, -3.780237],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_09111987b0004e0828640ae49c94da69 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#1f6aa5;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_c714d5700ad00acc73aacd49aff2569e.bindTooltip(
+                `<div>
+                     <b>Dart</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c714d5700ad00acc73aacd49aff2569e.setIcon(div_icon_09111987b0004e0828640ae49c94da69);
+            
+    
+            var poly_line_8930e726532e7a7864c6d9cb8b186a33 = L.polyline(
+                [[50.505137, -3.780237], [50.478522, -3.761327]],
+                {"bubblingMouseEvents": true, "color": "#1f6aa5", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1f6aa5", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_8930e726532e7a7864c6d9cb8b186a33.bindTooltip(
+                `<div>
+                     Dart → Austins Bridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8dc1f3d9cce084e4b17c20544b247d57 = L.marker(
+                [50.478522, -3.761327],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_5437cd48158697ec334897a75e8a4874 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8dc1f3d9cce084e4b17c20544b247d57.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Austins Bridge<br>(Dart)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8dc1f3d9cce084e4b17c20544b247d57.setIcon(icon_5437cd48158697ec334897a75e8a4874);
+            
+    
+            var marker_71909569bbd0d396e5cbe0b1a843a5aa = L.marker(
+                [50.778322, -2.992206],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_39d0a628d07b12bd375a26a2877db12f = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_71909569bbd0d396e5cbe0b1a843a5aa.bindTooltip(
+                `<div>
+                     <b>Lower Axe</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_71909569bbd0d396e5cbe0b1a843a5aa.setIcon(div_icon_39d0a628d07b12bd375a26a2877db12f);
+            
+    
+            var poly_line_9707e934ece46ec4351aa8161f033a24 = L.polyline(
+                [[50.778322, -2.992206], [50.767425, -2.964048]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_9707e934ece46ec4351aa8161f033a24.bindTooltip(
+                `<div>
+                     Lower Axe → Raymonds Hill
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6363605a4b90e19bb11f8d06bc957414 = L.marker(
+                [50.767425, -2.964048],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_ac1049ba53f647b31a69f6770d2d2caf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_6363605a4b90e19bb11f8d06bc957414.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Raymonds Hill<br>(Lower Axe)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6363605a4b90e19bb11f8d06bc957414.setIcon(icon_ac1049ba53f647b31a69f6770d2d2caf);
+            
+    
+            var marker_a1da30d32e66c77d02340370deea2522 = L.marker(
+                [50.917409, -3.366313],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_6defb10cf03cb1c909c5470eee0417d3 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_a1da30d32e66c77d02340370deea2522.bindTooltip(
+                `<div>
+                     <b>Spratford Stream</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1da30d32e66c77d02340370deea2522.setIcon(div_icon_6defb10cf03cb1c909c5470eee0417d3);
+            
+    
+            var poly_line_eea0884ec04cfcd668fe252c6e0fea1e = L.polyline(
+                [[50.917409, -3.366313], [50.973423, -3.384112]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_eea0884ec04cfcd668fe252c6e0fea1e.bindTooltip(
+                `<div>
+                     Spratford Stream → Hockworthy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ca3de854622f8048bc7a014bf60d6083 = L.marker(
+                [50.973423, -3.384112],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_3f74949f79668950e3b6e2174f1e0849 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ca3de854622f8048bc7a014bf60d6083.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Hockworthy<br>(Spratford Stream)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca3de854622f8048bc7a014bf60d6083.setIcon(icon_3f74949f79668950e3b6e2174f1e0849);
+            
+    
+            var marker_10f6db3fab89ace4d9f00ac823130561 = L.marker(
+                [50.53105, -4.126611],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_4ed38f232bd22515d6760e8619a9610b = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_10f6db3fab89ace4d9f00ac823130561.bindTooltip(
+                `<div>
+                     <b>Lower River Tavy</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10f6db3fab89ace4d9f00ac823130561.setIcon(div_icon_4ed38f232bd22515d6760e8619a9610b);
+            
+    
+            var poly_line_97172c0e4d9a0cf0dec498fc37718f45 = L.polyline(
+                [[50.53105, -4.126611], [50.501196, -4.060843]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_97172c0e4d9a0cf0dec498fc37718f45.bindTooltip(
+                `<div>
+                     Lower River Tavy → Dousland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_204b9363b4e587a3ec75aaf488d15194 = L.marker(
+                [50.501196, -4.060843],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_a17e98c10178bd324565533f70e43211 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_204b9363b4e587a3ec75aaf488d15194.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Dousland<br>(Lower River Tavy)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_204b9363b4e587a3ec75aaf488d15194.setIcon(icon_a17e98c10178bd324565533f70e43211);
+            
+    
+            var marker_e94a63bee75d96f33ab097f05a7ea328 = L.marker(
+                [50.850521, -3.389122],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_11adbdb3286674091f5411a70b1e6d04 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_e94a63bee75d96f33ab097f05a7ea328.bindTooltip(
+                `<div>
+                     <b>Lower Culm</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e94a63bee75d96f33ab097f05a7ea328.setIcon(div_icon_11adbdb3286674091f5411a70b1e6d04);
+            
+    
+            var poly_line_669cc31e16139949ebd9fc291455f88f = L.polyline(
+                [[50.850521, -3.389122], [50.800436, -3.436835]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_669cc31e16139949ebd9fc291455f88f.bindTooltip(
+                `<div>
+                     Lower Culm → Killerton Beare Farm
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_70d6b4c802c09d70b09e7b846b08113f = L.marker(
+                [50.800436, -3.436835],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_28b6c26ad266135adc4903aa3b0bb0d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_70d6b4c802c09d70b09e7b846b08113f.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Killerton Beare Farm<br>(Lower Culm)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_70d6b4c802c09d70b09e7b846b08113f.setIcon(icon_28b6c26ad266135adc4903aa3b0bb0d3);
+            
+    
+            var marker_f0d9ac6e1baa33da73dd23a7b9b963dd = L.marker(
+                [50.645684, -3.742121],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_45bea44dfc25666c78385868d0c3ee71 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_f0d9ac6e1baa33da73dd23a7b9b963dd.bindTooltip(
+                `<div>
+                     <b>Wray Brook</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f0d9ac6e1baa33da73dd23a7b9b963dd.setIcon(div_icon_45bea44dfc25666c78385868d0c3ee71);
+            
+    
+            var poly_line_d7667111d33f841f2d140fa661461d2e = L.polyline(
+                [[50.645684, -3.742121], [50.679934, -3.738651]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_d7667111d33f841f2d140fa661461d2e.bindTooltip(
+                `<div>
+                     Wray Brook → Mardon Down
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2079a63df22cf166af759cae9cfa09fe = L.marker(
+                [50.679934, -3.738651],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_4c60074713331a695f18a264ea017c55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2079a63df22cf166af759cae9cfa09fe.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Mardon Down<br>(Wray Brook)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2079a63df22cf166af759cae9cfa09fe.setIcon(icon_4c60074713331a695f18a264ea017c55);
+            
+    
+            var marker_1dbb698ab5de99b686fc7dfa24e54b63 = L.marker(
+                [50.741082, -3.280301],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_209893fdfd2d0ea28d22ec2f93fb96d9 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_1dbb698ab5de99b686fc7dfa24e54b63.bindTooltip(
+                `<div>
+                     <b>Lower River Otter</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1dbb698ab5de99b686fc7dfa24e54b63.setIcon(div_icon_209893fdfd2d0ea28d22ec2f93fb96d9);
+            
+    
+            var poly_line_0069d30fb914a9b25f92de0ff4eb328c = L.polyline(
+                [[50.741082, -3.280301], [50.776715, -3.17662]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_0069d30fb914a9b25f92de0ff4eb328c.bindTooltip(
+                `<div>
+                     Lower River Otter → Brookfield Farm
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5dac51385cd2a5915a377a45b5703d5 = L.marker(
+                [50.776715, -3.17662],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_618fce1d5ae99fa3a6fbcdf106460d7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b5dac51385cd2a5915a377a45b5703d5.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Brookfield Farm<br>(Lower River Otter)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5dac51385cd2a5915a377a45b5703d5.setIcon(icon_618fce1d5ae99fa3a6fbcdf106460d7e);
+            
+    
+            var marker_6a1c5bec965a1767237bae1adda0faee = L.marker(
+                [50.899389, -4.121009],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_ea3fd3241afbf168dce4091a35c337bd = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_6a1c5bec965a1767237bae1adda0faee.bindTooltip(
+                `<div>
+                     <b>Torridge (Lew to Estuary)</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a1c5bec965a1767237bae1adda0faee.setIcon(div_icon_ea3fd3241afbf168dce4091a35c337bd);
+            
+    
+            var poly_line_f93d1213bb3b960f5f74a98a31c6e529 = L.polyline(
+                [[50.899389, -4.121009], [50.881197, -4.15283]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_f93d1213bb3b960f5f74a98a31c6e529.bindTooltip(
+                `<div>
+                     Torridge (Lew to Estuary) → Allisland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5137fc38a46bef3d089811d8242570a1 = L.marker(
+                [50.881197, -4.15283],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_a6e45efdc0f27bd340a9c6b3695f4b28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5137fc38a46bef3d089811d8242570a1.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Allisland<br>(Torridge (Lew to Estuary))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5137fc38a46bef3d089811d8242570a1.setIcon(icon_a6e45efdc0f27bd340a9c6b3695f4b28);
+            
+    
+            var marker_66c1b2877ef8bccc43f4b3c9d9458c20 = L.marker(
+                [50.423462, -3.759486],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_830ed03d4f16cc5b82cbda4137e01d48 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_66c1b2877ef8bccc43f4b3c9d9458c20.bindTooltip(
+                `<div>
+                     <b>Harbourne River</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_66c1b2877ef8bccc43f4b3c9d9458c20.setIcon(div_icon_830ed03d4f16cc5b82cbda4137e01d48);
+            
+    
+            var poly_line_60c609764f150a5ef260cefdb204f2ba = L.polyline(
+                [[50.423462, -3.759486], [50.391343, -3.701031]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_60c609764f150a5ef260cefdb204f2ba.bindTooltip(
+                `<div>
+                     Harbourne River → Harbertonford
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f1c124543b3490acecfed92ff7b6b250 = L.marker(
+                [50.391343, -3.701031],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_c87638cc08445183d0d8f133899f1695 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_f1c124543b3490acecfed92ff7b6b250.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Harbertonford<br>(Harbourne River)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1c124543b3490acecfed92ff7b6b250.setIcon(icon_c87638cc08445183d0d8f133899f1695);
+            
+    
+            var marker_62f904e370824da615b75c16e9379d0e = L.marker(
+                [50.577569, -4.744903],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_d2f055fd24ac3df69b6d5928f6d5263a = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_62f904e370824da615b75c16e9379d0e.bindTooltip(
+                `<div>
+                     <b>Allen</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_62f904e370824da615b75c16e9379d0e.setIcon(div_icon_d2f055fd24ac3df69b6d5928f6d5263a);
+            
+    
+            var poly_line_d36ddd2f83eb60d409433695fda28b36 = L.polyline(
+                [[50.577569, -4.744903], [50.592823, -4.742852]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_d36ddd2f83eb60d409433695fda28b36.bindTooltip(
+                `<div>
+                     Allen → St Teath
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3a920abb7e8d68402588d763d735512c = L.marker(
+                [50.592823, -4.742852],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_0caf860e70df4b8f8ef8b7ae420e2ba0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_3a920abb7e8d68402588d763d735512c.bindTooltip(
+                `<div>
+                     <b>gauge:</b> St Teath<br>(Allen)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3a920abb7e8d68402588d763d735512c.setIcon(icon_0caf860e70df4b8f8ef8b7ae420e2ba0);
+            
+    
+            var marker_afba52bb8a6100433a3c20d10c679db4 = L.marker(
+                [50.502502, -4.034037],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_c731fb9acca4817fd8656e0a89161256 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_afba52bb8a6100433a3c20d10c679db4.bindTooltip(
+                `<div>
+                     <b>Meavy</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afba52bb8a6100433a3c20d10c679db4.setIcon(div_icon_c731fb9acca4817fd8656e0a89161256);
+            
+    
+            var poly_line_9fe30755e985fb8f69b7cb53ed44e450 = L.polyline(
+                [[50.502502, -4.034037], [50.501196, -4.060843]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_9fe30755e985fb8f69b7cb53ed44e450.bindTooltip(
+                `<div>
+                     Meavy → Dousland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0f1eb8824e02c2e322c3684d981e0b80 = L.marker(
+                [50.501196, -4.060843],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_9c8a6421bb03ff159b8d48019cbc2435 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_0f1eb8824e02c2e322c3684d981e0b80.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Dousland<br>(Meavy)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f1eb8824e02c2e322c3684d981e0b80.setIcon(icon_9c8a6421bb03ff159b8d48019cbc2435);
+            
+    
+            var marker_08268a7fdb573ba782f406dba219382b = L.marker(
+                [50.443281, -4.41754],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_e902cd97873de88bfcb9570d22ee0843 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_08268a7fdb573ba782f406dba219382b.bindTooltip(
+                `<div>
+                     <b>Seaton</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08268a7fdb573ba782f406dba219382b.setIcon(div_icon_e902cd97873de88bfcb9570d22ee0843);
+            
+    
+            var poly_line_c08ce6d113b2148e58dcab83b8ba85a1 = L.polyline(
+                [[50.443281, -4.41754], [50.480592, -4.462347]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_c08ce6d113b2148e58dcab83b8ba85a1.bindTooltip(
+                `<div>
+                     Seaton → St Cleer
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c17e8896a93ce12e06bd6f5f30cb7987 = L.marker(
+                [50.480592, -4.462347],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_8dfce96e6f3c0e77a02f1e4ae75133ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c17e8896a93ce12e06bd6f5f30cb7987.bindTooltip(
+                `<div>
+                     <b>gauge:</b> St Cleer<br>(Seaton)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c17e8896a93ce12e06bd6f5f30cb7987.setIcon(icon_8dfce96e6f3c0e77a02f1e4ae75133ee);
+            
+    
+            var marker_e17a2d0efe31669e4cb872e34b150f1f = L.marker(
+                [50.84505, -4.172025],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_8d02457edad28f0df38b52e89670c4d2 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_e17a2d0efe31669e4cb872e34b150f1f.bindTooltip(
+                `<div>
+                     <b>Torridge (Combe Lake to Lew)</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e17a2d0efe31669e4cb872e34b150f1f.setIcon(div_icon_8d02457edad28f0df38b52e89670c4d2);
+            
+    
+            var poly_line_2c78e4a3d0b1a7c30195001009d86385 = L.polyline(
+                [[50.84505, -4.172025], [50.881197, -4.15283]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_2c78e4a3d0b1a7c30195001009d86385.bindTooltip(
+                `<div>
+                     Torridge (Combe Lake to Lew) → Allisland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c702b92aae49da7b6baa2d2c1d3a5038 = L.marker(
+                [50.881197, -4.15283],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_cb1c47d3537c58c50d10ac9926a6990a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c702b92aae49da7b6baa2d2c1d3a5038.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Allisland<br>(Torridge (Combe Lake to Lew))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c702b92aae49da7b6baa2d2c1d3a5038.setIcon(icon_cb1c47d3537c58c50d10ac9926a6990a);
+            
+    
+            var marker_1f18d6f6c2ce03b1452873f1e7443f77 = L.marker(
+                [50.554821, -4.073894],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_d57471ab720784fd4e4218dcf40862bc = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_1f18d6f6c2ce03b1452873f1e7443f77.bindTooltip(
+                `<div>
+                     <b>Walkham</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f18d6f6c2ce03b1452873f1e7443f77.setIcon(div_icon_d57471ab720784fd4e4218dcf40862bc);
+            
+    
+            var poly_line_13fdf2bac0226745ea642ecb1ae7a6fa = L.polyline(
+                [[50.554821, -4.073894], [50.586713, -4.052086]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_13fdf2bac0226745ea642ecb1ae7a6fa.bindTooltip(
+                `<div>
+                     Walkham → Langstone Moor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6c5fb785705a4d2c5afd8e060f2e1d23 = L.marker(
+                [50.586713, -4.052086],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_434f86b5b362d6176cd0d9395207db19 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_6c5fb785705a4d2c5afd8e060f2e1d23.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Langstone Moor<br>(Walkham)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c5fb785705a4d2c5afd8e060f2e1d23.setIcon(icon_434f86b5b362d6176cd0d9395207db19);
+            
+    
+            var marker_a3954d2f23ff3798537610c8fb621271 = L.marker(
+                [50.890258, -3.532857],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_c76081c4924cca3a71a7244c069ff861 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_a3954d2f23ff3798537610c8fb621271.bindTooltip(
+                `<div>
+                     <b>Exe (Barle to Culm)</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a3954d2f23ff3798537610c8fb621271.setIcon(div_icon_c76081c4924cca3a71a7244c069ff861);
+            
+    
+            var poly_line_979a8d601149a24c365214cbdc65cc47 = L.polyline(
+                [[50.890258, -3.532857], [50.884147, -3.488185]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_979a8d601149a24c365214cbdc65cc47.bindTooltip(
+                `<div>
+                     Exe (Barle to Culm) → Tiverton
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6fab784e02b2e81665518437a3eb1604 = L.marker(
+                [50.884147, -3.488185],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_77d77d658de7709a236994b824ff438d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_6fab784e02b2e81665518437a3eb1604.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Tiverton<br>(Exe (Barle to Culm))
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6fab784e02b2e81665518437a3eb1604.setIcon(icon_77d77d658de7709a236994b824ff438d);
+            
+    
+            var marker_8e3550af7e9027263f09f62f6b8d7cad = L.marker(
+                [50.805837, -3.287496],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var div_icon_379ed9cd8448aecf4eb180cfd7b0d0c6 = L.divIcon({
+  "html": "\u003cdiv style=\"width:14px;height:14px;border-radius:50%;background:#e07b39;border:1.5px solid #fff;box-shadow:0 0 2px rgba(0,0,0,0.4);\"\u003e\u003c/div\u003e",
+  "iconSize": [14, 14],
+  "iconAnchor": [7, 7],
+  "className": "empty",
+});
+        
+    
+            marker_8e3550af7e9027263f09f62f6b8d7cad.bindTooltip(
+                `<div>
+                     <b>Tale</b><br>catchment centroid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e3550af7e9027263f09f62f6b8d7cad.setIcon(div_icon_379ed9cd8448aecf4eb180cfd7b0d0c6);
+            
+    
+            var poly_line_35e00f48af64670524611e844666b684 = L.polyline(
+                [[50.805837, -3.287496], [50.776715, -3.17662]],
+                {"bubblingMouseEvents": true, "color": "#e07b39", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e07b39", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            poly_line_35e00f48af64670524611e844666b684.bindTooltip(
+                `<div>
+                     Tale → Brookfield Farm
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ff70b0e695c5709ee44c91c4493d0a2f = L.marker(
+                [50.776715, -3.17662],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_6ac6ac92c0605c4b3ca2164131aac638 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ff70b0e695c5709ee44c91c4493d0a2f.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Brookfield Farm<br>(Tale)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ff70b0e695c5709ee44c91c4493d0a2f.setIcon(icon_6ac6ac92c0605c4b3ca2164131aac638);
+            
+    
+            var marker_18cb317b10981d88fe47a74e1da9fdba = L.marker(
+                [50.516929, -3.841878],
+                {
+}
+            ).addTo(map_932e7108fadb66e0bc60842c870fae23);
+        
+    
+            var icon_c4d3cbd5bf4478b8df8e586b36682e7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_18cb317b10981d88fe47a74e1da9fdba.bindTooltip(
+                `<div>
+                     <b>gauge:</b> Holne Priddons Farm<br>(Dart)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_18cb317b10981d88fe47a74e1da9fdba.setIcon(icon_c4d3cbd5bf4478b8df8e586b36682e7d);
+            
+</script>
+</html>
