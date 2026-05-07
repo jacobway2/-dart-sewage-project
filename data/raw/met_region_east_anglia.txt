@@ -2,7 +2,7 @@ Areal values from HadUK-Grid 1km gridded climate data from land surface network
 Source: Met Office National Climate Information Centre
 Monthly, seasonal and annual total precipitation amount for East Anglia
 Areal series, starting in 1836
-Last updated 01-Apr-2026 11:35
+Last updated 01-May-2026 11:32
 year    jan    feb    mar    apr    may    jun    jul    aug    sep    oct    nov    dec     win     spr     sum     aut     ann
 1836   44.1   47.0   85.2   55.2   16.9   58.7   46.5   29.6   82.6   94.0   80.4   42.4     ---   157.4   134.8   257.0   682.6
 1837   64.8   54.3   20.7   43.4   33.9   37.0   46.9   96.2   39.1   49.0   52.1   47.1   161.5    98.0   180.2   140.2   584.6
@@ -194,4 +194,4 @@ year    jan    feb    mar    apr    may    jun    jul    aug    sep    oct    no
 2023   47.9    5.9   98.6   55.2   46.5   24.4   80.8   61.9   56.8  135.7   75.9   85.9   108.2   200.4   167.1   268.4   775.7
 2024   55.6  112.7   47.1   58.7   79.6   23.6   77.8   19.1   95.5   56.8   50.6   52.0   254.2   185.4   120.5   202.9   729.2
 2025   54.3   38.8    5.8   21.9   22.7   27.3   54.9   20.6   47.5   56.1   92.9   46.6   145.2    50.5   102.7   196.5   489.5
-2026   81.4   72.1   24.2                                                                  200.1                                
+2026   81.4   72.1   24.2    4.0                                                           200.1                                

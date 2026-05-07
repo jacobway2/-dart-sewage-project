@@ -2,7 +2,7 @@ Areal values from HadUK-Grid 1km gridded climate data from land surface network
 Source: Met Office National Climate Information Centre
 Monthly, seasonal and annual total precipitation amount for England SW and S Wales
 Areal series, starting in 1836
-Last updated 01-Apr-2026 11:35
+Last updated 01-May-2026 11:32
 year    jan    feb    mar    apr    may    jun    jul    aug    sep    oct    nov    dec     win     spr     sum     aut     ann
 1836  105.8   59.5  150.5   82.9    9.8   81.4   95.5   44.8  110.6  139.4  209.1  113.2     ---   243.2   221.7   459.1  1202.5
 1837  101.0  125.7   33.2   50.0   36.1   55.3   70.3   99.8   84.1  111.9  106.4   97.7   339.8   119.3   225.4   302.4   971.5
@@ -194,4 +194,4 @@ year    jan    feb    mar    apr    may    jun    jul    aug    sep    oct    no
 2023  173.0   21.0  196.5   86.9   50.0   35.8  158.0  101.6  120.7  182.4  179.5  229.4   351.2   333.4   295.4   482.6  1534.7
 2024  125.9  227.8  159.7  115.0   94.7   35.5   94.1   73.1  160.5  141.3  145.2  114.4   583.1   369.4   202.7   447.0  1487.1
 2025  159.8   98.6   16.9   83.6   37.8   90.2   43.5   61.2  152.2  123.5  209.1  199.7   372.8   138.4   194.8   484.7  1276.0
-2026  215.3  173.7   67.5                                                                  588.7                                
+2026  215.3  173.7   67.5   40.5                                                           588.7                                

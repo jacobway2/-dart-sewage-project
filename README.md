@@ -4,7 +4,7 @@ A data-driven analysis of storm overflow spill counts on the River Dart, across 
 
 The full narrative writeup is available at: https://hackmd.io/@nXsN6esuSfCxk-psINDUjQ/HkBMdgMCbg
 
-A copy paste of the narrative is also available in this repository as `blog_narrative.md` incase the link above is inaccessible.
+A copy paste of the narrative is also available in this repository as `blog_narrative.txt` incase the link above is inaccessible.
 
 ## How to Replicate
 
@@ -24,7 +24,13 @@ All data is fetched programmatically within the notebook. No manual downloads ar
 
 ## Directory Structure
 
-The project root contains `blog.ipynb`, `README.md`, `requirements.txt`, and `blog_narrative.md`. Raw and processed data are stored in `data/raw/` and `data/processed/` respectively. All chart outputs are saved to `outputs/`.
+The project root contains blog.ipynb, README.md, requirements.txt, and blog_narrative.txt.
+
+data/raw/ contains the four years of EDM Excel files downloaded from the EA, six Met Office regional rainfall text files, and twenty per-catchment gauge CSV files fetched from the EA Hydrology API.
+
+data/processed/ contains five cleaned CSV files produced by the notebook: dart_overflows.csv, dart_rainfall_daily.csv, dart_annual_storm_days.csv, sww_rivers.csv, and national_summary.csv.
+
+outputs/ contains all chart outputs produced by the notebook: seven PNG files used in the narrative, five additional PNG files produced for transparency and interactive exploration within the notebook, and the interactive folium map as folium_map.html.
 
 ## Data Sources & References
 
