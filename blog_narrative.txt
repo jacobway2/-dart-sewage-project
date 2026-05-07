@@ -1,0 +1,120 @@
+# Storm Overflows in the South West: A Three-Scale Analysis of Sewage Spills on the Dart, the South West, and England
+The Dart is one of the most popular whitewater kayaking rivers in England. It's paddled by thousands yearly, particularly on days immediately after heavy rainfall when levels are high. As a kayaker myself, I wanted to understand how frequently the Dart's overflow system discharges beyond what weather alone demands, whether this is improving or worsening, and how the Dart compares to the wider South West Water (SWW) region and other water companies nationwide. This angle is especially relevant to kayakers as we often aim to paddle in high water, exactly at the moments when recent heavy rainfall has been placing the greatest pressure on the overflow system.
+
+To understand this sewage burden, we use storm overflow spill counts. A storm overflow is a safety valve to prevent sewage backing up into homes. When opened to relieve pressure, these valves release a mixture of raw or partially treated sewage into nearby rivers or estuaries.
+
+We assess the overflow burden at three scales. First, at scale 1, we look at the Dart itself. At scale 2 we then contextualise this alongside the highest spilling catchments in the SWW region. Finally, we consider the national picture, comparing SWW against the other water companies in England.
+
+## The Data and how its used
+
+The primary dataset is the Environment Agency's (EA) Event Duration Monitoring (EDM) annual returns (Environment Agency, n.d.-a) - a record of how many times each monitored storm overflow in England spills annually. We use four years of this data - from 2021 through 2024.
+
+A count only records how many times an overflow activated - not how much or for how long it discharged. Some spilling is an unavoidable consequence of weather pressure on sewer networks, and spill-counts alone cannot distinguish necessary activations from excess ones. Weather adjustment therefore sits at the core of our analysis throughout - the meaningful question isn't how many spills occurred, but how many occurred beyond what the weather conditions would lead us to expect.
+
+We should note, some outlets will not yet be equipped with monitors, meaning their spill activity is missing from the record. If some areas have a higher share of unmonitored overflows they will appear better than they truly are - an unavoidable source of potential bias to keep in mind.
+
+At scales 1 and 2, weather is measured using daily rainfall readings from the EA's Hydrology API (Environment Agency, n.d.-b). At scale 3, daily gauge data was not available, so we use the Met Office's regional rainfall series  (Met Office, 2024) instead - monthly totals for six English climate regions, aggregated to annual figures and matched to each water company. The consequences of this coarser proxy are discussed in the scale 3 section. 
+
+To avoid classification bias, we use the EA's WFD Waterbody Catchment (Environment Agency, n.d.-a) classification at scale 2.
+
+The primary tool used throughout the analysis is ordinary least squares (OLS) regression, which fits a straight line through a set of data points to describe how one variable moves linearly with another. The residuals (gaps between each observation and the fitted line) become our weather-adjusted rankings throughout.
+
+OLS does two jobs - cross-sectional and temporal. Rainfall is controlled for using OLS residuals across both dimensions. The number of monitored sites is divided out for cross-sectional comparison at scales 2 and 3, and for temporal comparison at scale 3 where coverage expanded. At scale 2 site counts were stable year-on-year, so no division over time was required. Full details are explained at each scale.
+
+At scales 1 and 2, daily EA gauge data (Environment Agency, n.d.-b) allows us to compute storm days - a threshold-based count of days intense enough to stress overflow capacity (explained at scale 1).
+
+All outputs have an interactive version with hover tooltips in the accompanying notebook.
+
+## Scale 1: The Dart
+
+We filtered EDM overflow sites to the 5 discharging into the freshwater Dart - the whitewater sections where people kayak. The two estuarine sites near Dartmouth were excluded as they're irrelevant to the kayaking framing.
+
+To measure rainfall pressure we use the only two EA gauges within the Dart catchment boundary - Austins Bridge and Holne Priddons Farm. We identified these by cross-referencing the EA's gauge network (Environment Agency, n.d.-b) against the EA's Catchment Data Explorer boundary  (Environment Agency, n.d.-c).The gauges daily readings are averaged to give a single catchment figure with storm days calculated from this - a day qualifies if the catchment average reaches or exceeds 10mm. The 10mm threshold is chosen to capture days intense enough to plausibly stress overflow capacity. We test sensitivity to this choice below.
+
+Because networks carry sewage and surface runoff in a single pipe, heavy rainfall inevitably increases spill pressure regardless of infrastructure quality. We model this by regressing the Dart's total annual spill-count against annual storm days, giving us a predicted value for each year and a residual.
+
+[insert scale1_dart_ols_residuals chart here]
+
+Storm days account for around 80% of year-on-year variation in Dart spill-counts (adjusted Rsquared=0.797 - adjusted used throughout for a more honest picture at small samples), with each additional storm day associated with approximately five extra spills. With only four data points the model is indicative rather than definitive - p=0.070 doesn't reach significance at the 5% level. Fresh confidence in this approach comes from cross validation across the wider SWW panel.
+
+[insert scale1_validation_side_by_side here]
+
+We applied this same per-catchment weather adjustment to all 20 catchments used in the scale 2 analysis. The left panel shows raw trajectories indexed to 2021, the right the same data after adjustment - the shared weather dip largely disappears. A method fitted on only four data points reproducing the same result across 20 catchments gives reasonable confidence it's capturing a genuine relationship.
+
+2023 was the wettest year in the dataset with 82 storm days and produced the highest spill-count at 360. 2024 had meaningfully fewer storm days (71) yet produced an almost identical count of 355, giving a 2024 residual of +31.4 - the largest across the years.
+
+We test sensitivity by re-running at 15mm and 20mm - testing upward only, since lower thresholds would capture light rainfall unlikely to stress capacity. At 15mm the 2024 anomaly holds clearly (+17.0). At 20mm it doesn't, seemingly reflecting a data coincidence where 2023 and 2024 recorded identical storm days, leaving the model no rainfall difference to work with. The core finding is robust at thresholds most relevant to sewer capacity stress.
+
+## Scale 2: South West Water's Region
+
+[outputs/folium_map.png - screenshot to be taken from browser before committing narrative]
+
+The map above shows all 20 catchment gauge pairings. The Dart is shown in blue (note the Holne Priddons farm gauge also seen on this map is only used at scale 1) with all others in orange.
+
+Widening the lens, we ask where the Dart ranks within the SWW region - which catchments carry the heaviest overflow burden, whether that ranking is consistent over time, and whether weather explains why some are persistently worse.
+
+The EDM data tags each overflow site with a WFD Waterbody Catchment label (Environment Agency, n.d.-a). There are over 200 such catchments across the SWW region - we restricted to the 20 with the highest total spill-count across 2021–2024 (including low-count catchments adds noise without descriptive power). We inspected the top 35 to identify the true top 20 freshwater catchments. 
+
+Raw spill totals would reflect network size rather than spill intensity, so we divided each catchment's annual total by its monitored site count. Site counts were stable across all four years, so no equivalent normalisation was required for the temporal analysis.
+
+Rainfall at scale 2 uses the same 10mm threshold as scale 1. For each catchment we took the centroid of a bounding box around the EA boundary (Environment Agency, n.d.-c) and selected the nearest gauge with complete data from the EA Hydrology API  (Environment Agency, n.d.-b). Single-gauge representativeness is addressed below
+
+Applying the same cross-sectional OLS principle as scale 1, we found a very poor fit - adjusted Rsquared of 0.016, not statistically significant. Storm days do not meaningfully explain cross-sectional spill variation here. This finding maps cleanly to the following story. The SWW region is geographically fairly small and has low or uncorrelated cross-catchment variation in rainfall, meaning that river to river (within the SWW region), rainfall has no meaningful say in determining how bad it is, but rather differences in external factors such as infrastructure do.
+
+This also addresses any gauge selection concern - cross-catchment weather variation can't explain spill differences, so local gauge deviations are unlikely to be driving our residuals
+
+Because cross-sectional weather adjustment adds nothing here, we instead fitted a temporal OLS model using a single average regional storm days figure per year against the regional average spill rate - collapsing to four year-level since the regional figure doesn't vary between catchments. The model's coefficients were then applied back to individual catchment-year rows, producing temporal residuals for all 20 catchments.
+
+The model fitted the year-on-year variation extremely well (adjusted Rsquared=0.989, p=0.004). With only four data points we should treat the result as indicative rather than definitive, though confidence is improved by the fact that each year-level mean is itself an aggregate of many observations not a single measurement.
+
+[insert scale2_sww_ranking.png]
+
+The Dart ranks fourth - above the regional average, but not the worst performing catchment in the SWW region. Because weather explains almost nothing cross-sectionally, we say (with some caution) that this ranking primarily reflects infrastructure differences - the catchments to the right are there because of worse infrastructure not weather.
+
+[insert scale2_sww_trends_regional_residuals.png]
+
+Once the shared weather effect is removed, catchment rankings prove largely stable - those above zero in 2021 broadly remain there, those below remain below. The Harbourne and the Allen remain far above all others in every year, consistent with the bar chart.
+
+The Dart spills more than regional weather pressure predicts, consistently and increasingly so across the four years we can observe. The Dart isn't the most heavily burdened catchment in the region but is persistently above the SWW average in a ranking that we believe primarily reflects infrastructure burden rather than rainfall. To understand whether this picture holds nationally, we zoom out again.
+
+## Scale 3: The National Picture
+
+Nine English water companies appear in the EDM data. We excluded Welsh Water, as it has a small English overflow footprint which could distort findings. Anglian Water is included in the cross-sectional analysis but excluded from all temporal analysis because its monitored site count grew by 72% between 2021 and 2024, meaning trend changes cannot be reliably distinguished from expanding coverage. Several other companies also expanded coverage over the period. Dividing by monitored sites attempts to control for this, but rests on the assumption that new overflows are as spill-prone as existing ones - we suspect pressure to monitor worst performers first means new monitors systematically record less spills, biasing toward apparent improvement. We can't verify this but note the expected bias direction.
+
+At scale 3 we control for weather using annual rainfall totals calculated from the Met Office's regional series (Met Office, 2024), matching each company's operating area to the series' wider regions. This proxy adds new limitations, most notably, SWW shares its regional figure with Wessex Water, both falling within the same Met Office region. Whether their operating areas experience meaningfully different rainfall within that boundary the data cannot resolve.
+
+Across the nine companies, we find annual rainfall differences explain a meaningful share of between company variation in spill rates - adjusted Rsquared=0.468, p=0.025. This contrasts directly with scale 2, where the same test found almost no explanatory power across the SWW region. The spatial rainfall adjusted picture is therefore needed for cross-sectional comparison here.
+
+*[insert scale3_national_ranking_adjusted.png]*
+
+The raw ranking (available in the notebook) placed United Utilities first and SWW second. Once regional rainfall is accounted for, the ranking shifts, with United Utilities dropping to third - explained by higher regional rainfall. SWW does not move - it sits second on both the raw and adjusted charts. Yorkshire Water rises from third to first once rainfall is controlled for, its raw rate poorly explained by weather.
+
+SWW's stable position is a major finding, though Wessex Water's large negative residual - spilling substantially less than the model predicts - may partially be an artefact of their shared rainfall figure. If SWW's area is truly wetter than Wessex's, SWW's residual will appear larger than it truly is and Wessex's more negative. We can't confirm this, but can identify any resulting bias's direction.
+
+*[insert scale3_national_trends_indexed.png]*
+
+Every company dropped below its 2021 baseline in 2022 and recovered in 2023 - the same weather pattern as at other scales. SWW followed this pattern but saw a smaller rebound, suggesting its 2023 was worse in relative terms.
+
+*[insert scale3_national_trends_adjusted.png]*
+
+Once weather is stripped out, the 2022 dip has not  entirely disappeared - the annual rainfall proxy has mitigated but not fully removed the shared national weather signal, giving retrospective confidence in the storm days approach, where the same dip disappeared cleanly. Despite this, trajectories across most companies hover near zero with no clear directional trend, consistent with the scale 2 SWW picture.
+
+The scale 3 picture isn't a good one for SWW. t sits second nationally on raw spills per monitored site and remains there once rainfall is accounted for - the consistency between both rankings giving additional confidence in the finding. The trend analysis gives no clear signal.
+
+## Conclusion
+
+All three scales point consistently in one direction. At scale 1, the Dart's 2024 residual is the largest across the years despite being a drier year than 2023 - its overflows discharged more than weather alone would predict, with the gap, if anything, widening across the period. At scale 2, the Dart ranks fourth among the 20 highest spilling SWW catchments, sitting persistently above the regional weather-adjusted average in a ranking that rainfall can't explain. At scale 3, SWW sits second nationally on spills per monitored site and holds that position once regional rainfall is accounted for - the consistency between the raw and adjusted rankings being the most important feature of that finding.
+
+The only potential saving grace for SWW's picture here is the possibility that our scale 3 model meaningfully overstates SWW's relative burden as a consequence of the shared Met Office region with Wessex - if SWW's operating area is genuinely wetter than Wessex's, a better proxied model might explain more of SWW's spill rate as weather driven. This cannot be resolved with available data but finer spatial rainfall data (properly matching to each company's boundary) would give the national comparison stronger grounding and could paint SWW in a better light.
+
+Ultimately we find at every scale that, within the four-year period, a kayaker heading to the Dart after heavy rain can expect to be paddling through one of the more poorly performing overflow networks in both the SWW region and the country, and one that appears to, if anything, be getting worse, not better.
+
+## Data Sources & References
+
+Environment Agency. (n.d.-a). Event Duration Monitoring - Storm Overflows - Annual Returns. www.data.gov.uk. Retrieved May 7, 2026, from https://www.data.gov.uk/dataset/19f6064d-7356-466f-844e-d20ea10ae9fd/event-duration-monitoring-storm-overflows-annual-returns
+
+Environment Agency. (n.d.-b). Hydrology Data Explorer. environment.data.gov.uk. Retrieved May 7, 2026, from https://environment.data.gov.uk/hydrology/explore
+
+Environment Agency. (n.d.-c). Catchment Data Explorer. environment.data.gov.uk. Retrieved May 7, 2026, from https://environment.data.gov.uk/catchment-planning/
+
+Met Office. (2024). UK and Regional Series. Met Office. https://www.metoffice.gov.uk/research/climate/maps-and-data/uk-and-regional-series

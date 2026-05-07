@@ -1,69 +1,37 @@
-# Sewage on the Dart: How Bad Is It Really, and How Does It Compare?
+# Storm Overflows in the South West: A Three-Scale Analysis of Sewage Spills on the Dart, the South West, and England
 
-**BEE2041: Data Science for Economics — Empirical Project**
+A data-driven analysis of storm overflow spill counts on the River Dart, across the South West Water region, and nationally across English water companies, using Environment Agency and Met Office data from 2021 to 2024.
 
-project analyses storm overflow (sewage discharge) data on the river dart>places it in 
-the context of all South West Water rivers>then England as a whole>uses environment agency 
-event duration monitoring (EDM) data>normalised against rainfall data>data from two environment
-agency hydrology API gauges within the dart catchment (defined by the environment agencys 'catchment data explorer')>asks - is the dart particularly bad and how does it compare to others in the SWW region and the country as a whole?
+The full narrative writeup is available at: https://hackmd.io/@nXsN6esuSfCxk-psINDUjQ/HkBMdgMCbg
 
----
+A copy paste of the narrative is also available in this repository as `blog_narrative.md` incase the link above is inaccessible.
 
-## Repository Structure
+## How to Replicate
+
+Clone the repository and navigate to the project folder, then install dependencies:
 
 ```
-dart-sewage-project/
-├── README.md               ← this file
-├── blog.ipynb              ← the notebook
-├── data/
-│   ├── raw/                ← files as downloaded
-│   └── processed/          ← cleaned files produced by the notebook
-└── outputs/                ← saved plot images
-```
-
----
-
-## Data Sources
-
-### 1. Storm Overflow (EDM) Data
-**Source:** Environment Agency Event Duration Monitoring Annual Returns  
-**URL:** https://www.data.gov.uk/dataset/19f6064d-7356-466f-844e-d20ea10ae9fd/  
-Annual Excel files (one per year, 2020–2024) containing spill counts and durations. 
-The notebook downloads these programmatically.
-
-
-### 2. Rainfall Data
-**Source:** Environment Agency Hydrology API  
-**URL:** https://environment.data.gov.uk/hydrology/  
-Daily rainfall readings from two gauges within the Dart catchment:
-- Holne Priddacott Farm (Telemetry Ref 46169, WISKI ID 363710)
-- Austins Bridge rainfall gauge (Telemetry Ref 46103, WISKI ID 364176)
-
-No API key is required for either dataset.
-
----
-
-## How to Reproduce
-
-### 1. Clone the repository
-git clone https://github.com/<username>/dart-sewage-project.git
-cd dart-sewage-project
-
-### 2. Install dependencies
-
 pip install -r requirements.txt
+```
 
-### 3. Run the notebook
+Then open and run the notebook from top to bottom in a fresh kernel:
+
+```
 jupyter notebook blog.ipynb
+```
 
+All data is fetched programmatically within the notebook. No manual downloads are required.
 
-Run all cells from top to bottom
-The notebook will:
-- Download all EDM Excel files
-- add other stuff here later
+## Directory Structure
 
----
+The project root contains `blog.ipynb`, `README.md`, `requirements.txt`, and `blog_narrative.md`. Raw and processed data are stored in `data/raw/` and `data/processed/` respectively. All chart outputs are saved to `outputs/`.
 
-## Dependencies
+## Data Sources & References
 
-See `requirements.txt`
+Environment Agency. (n.d.-a). Event Duration Monitoring - Storm Overflows - Annual Returns. www.data.gov.uk. Retrieved May 7, 2026, from https://www.data.gov.uk/dataset/19f6064d-7356-466f-844e-d20ea10ae9fd/event-duration-monitoring-storm-overflows-annual-returns
+
+Environment Agency. (n.d.-b). Hydrology Data Explorer. environment.data.gov.uk. Retrieved May 7, 2026, from https://environment.data.gov.uk/hydrology/explore
+
+Environment Agency. (n.d.-c). Catchment Data Explorer. environment.data.gov.uk. Retrieved May 7, 2026, from https://environment.data.gov.uk/catchment-planning/
+
+Met Office. (2024). UK and Regional Series. Met Office. https://www.metoffice.gov.uk/research/climate/maps-and-data/uk-and-regional-series
