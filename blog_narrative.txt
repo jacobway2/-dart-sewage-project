@@ -33,11 +33,11 @@ To measure rainfall pressure we use the only two EA gauges within the Dart catch
 
 Because networks carry sewage and surface runoff in a single pipe, heavy rainfall inevitably increases spill pressure regardless of infrastructure quality. We model this by regressing the Dart's total annual spill-count against annual storm days, giving us a predicted value for each year and a residual.
 
-[insert scale1_dart_ols_residuals chart here]
+![scale1 OLS residuals](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale1_dart_ols_residuals.png)
 
 Storm days account for around 80% of year-on-year variation in Dart spill-counts (adjusted Rsquared=0.797 - adjusted used throughout for a more honest picture at small samples), with each additional storm day associated with approximately five extra spills. With only four data points the model is indicative rather than definitive - p=0.070 doesn't reach significance at the 5% level. Fresh confidence in this approach comes from cross validation across the wider SWW panel.
 
-[insert scale1_validation_side_by_side here]
+![scale1 validation](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale1_validation_sidebyside.png)
 
 We applied this same per-catchment weather adjustment to all 20 catchments used in the scale 2 analysis. The left panel shows raw trajectories indexed to 2021, the right the same data after adjustment - the shared weather dip largely disappears. A method fitted on only four data points reproducing the same result across 20 catchments gives reasonable confidence it's capturing a genuine relationship.
 
@@ -47,7 +47,7 @@ We test sensitivity by re-running at 15mm and 20mm - testing upward only, since 
 
 ## Scale 2: South West Water's Region
 
-[outputs/folium_map.png - screenshot to be taken from browser before committing narrative]
+[Click here to view the interactive catchment gauge map](https://raw.githack.com/jacobway2/-dart-sewage-project/main/outputs/folium_map.html)
 
 The map above shows all 20 catchment gauge pairings. The Dart is shown in blue (note the Holne Priddons farm gauge also seen on this map is only used at scale 1) with all others in orange.
 
@@ -67,11 +67,11 @@ Because cross-sectional weather adjustment adds nothing here, we instead fitted 
 
 The model fitted the year-on-year variation extremely well (adjusted Rsquared=0.989, p=0.004). With only four data points we should treat the result as indicative rather than definitive, though confidence is improved by the fact that each year-level mean is itself an aggregate of many observations not a single measurement.
 
-[insert scale2_sww_ranking.png]
+![scale2 ranking](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale2_sww_ranking.png)
 
 The Dart ranks fourth - above the regional average, but not the worst performing catchment in the SWW region. Because weather explains almost nothing cross-sectionally, we say (with some caution) that this ranking primarily reflects infrastructure differences - the catchments to the right are there because of worse infrastructure not weather.
 
-[insert scale2_sww_trends_regional_residuals.png]
+![scale2 regional residuals](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale2_sww_trends_regional_residuals.png)
 
 Once the shared weather effect is removed, catchment rankings prove largely stable - those above zero in 2021 broadly remain there, those below remain below. The Harbourne and the Allen remain far above all others in every year, consistent with the bar chart.
 
@@ -85,17 +85,17 @@ At scale 3 we control for weather using annual rainfall totals calculated from t
 
 Across the nine companies, we find annual rainfall differences explain a meaningful share of between company variation in spill rates - adjusted Rsquared=0.468, p=0.025. This contrasts directly with scale 2, where the same test found almost no explanatory power across the SWW region. The spatial rainfall adjusted picture is therefore needed for cross-sectional comparison here.
 
-*[insert scale3_national_ranking_adjusted.png]*
+![scale3 adjusted ranking](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale3_national_ranking_adjusted.png)
 
 The raw ranking (available in the notebook) placed United Utilities first and SWW second. Once regional rainfall is accounted for, the ranking shifts, with United Utilities dropping to third - explained by higher regional rainfall. SWW does not move - it sits second on both the raw and adjusted charts. Yorkshire Water rises from third to first once rainfall is controlled for, its raw rate poorly explained by weather.
 
 SWW's stable position is a major finding, though Wessex Water's large negative residual - spilling substantially less than the model predicts - may partially be an artefact of their shared rainfall figure. If SWW's area is truly wetter than Wessex's, SWW's residual will appear larger than it truly is and Wessex's more negative. We can't confirm this, but can identify any resulting bias's direction.
 
-*[insert scale3_national_trends_indexed.png]*
+![scale3 indexed trends](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale3_national_trends_indexed.png)
 
 Every company dropped below its 2021 baseline in 2022 and recovered in 2023 - the same weather pattern as at other scales. SWW followed this pattern but saw a smaller rebound, suggesting its 2023 was worse in relative terms.
 
-*[insert scale3_national_trends_adjusted.png]*
+![scale3 adjusted trends](https://raw.githubusercontent.com/jacobway2/-dart-sewage-project/main/outputs/scale3_national_trends_adjusted.png)
 
 Once weather is stripped out, the 2022 dip has not  entirely disappeared - the annual rainfall proxy has mitigated but not fully removed the shared national weather signal, giving retrospective confidence in the storm days approach, where the same dip disappeared cleanly. Despite this, trajectories across most companies hover near zero with no clear directional trend, consistent with the scale 2 SWW picture.
 
